@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Age generations</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <hr my-4>
+    <h3 style="color : teal;text-shadow:3px 2px 3px grey; " align="center">
+          Class activity(drop down lists and event listeners)
+    </h3>
+    <hr my-8>
+    <div class="container">
+      <div class="row">
+            <div class="col-sm-12 float-right">
+                <form>
+                    <label for="age-generation">Age generation </label>
+                    <select id="options">
+                        <option value="Igeneration">10-19</option>
+                        <option value="Millenials generation">20-29</option>
+                        <option value="Xenials generation">30-39</option>
+                        <option value="Baby bust generation">40-49</option>
+                        <option value="Silent generation">50-59</option>
+                        <option value="Greatest generation">60-100</option>
+                      </select>
+                </form>
+            </div>
+      </div>
+    </div>
+    <hr my-4>
+    <p>
+        To get your generation please click the button below.
+    </p>
+    <button type="button" onclick="checkGeneration()">Generation</button>
+    <p id="feedback">
+    </p>
+  </body>
+</html>
+<script type="text/javascript">
+        function fetchElement(id){
+              return document.getElementById(id);
+        }
+        function checkGeneration() {
+            var ageRange = fetchElement("options").value ;
+            fetchElement("feedback").innerHTML = ageRange ;
+        }
+</script>
